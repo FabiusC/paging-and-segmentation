@@ -1,0 +1,31 @@
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilos para las celdas de la tabla */
+td,
+th {
+  padding: 8px;
+  border: 1px solid #a9a9a9;
+  text-align: left;
+}
+
+/* Estilos alternativos para filas impares */
+tr:nth-child(odd) {
+  background-color: #c43636;
+  color: white;
+}
+
+/* Estilos para el encabezado de la tabla */
+th {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.tabla {
+  height: 150px;
+  overflow: auto;
+  margin: 1rem;
+}

@@ -1,0 +1,70 @@
+.principal {
+    
+    position: relative;
+    padding-bottom: 10rem;
+}
+
+.cont {
+    width: 100%;
+    height: 25rem;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.entrada {
+    padding: 1rem;
+    border: none;
+    border-bottom: solid 3px;
+    font-size: large;
+}
+
+.entrada:focus {
+    outline: none;
+    border: none;
+    border-bottom: solid 3px crimson;
+    transition: 500ms;
+}
+
+.my-button {
+    padding: 10px 20px;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+    font-weight: bolder;
+  }
+  .my-button:hover {
+    background-color: rgb(152, 15, 42);
+  }
+  .my-button:active {
+    background-color: rgb(101, 9, 28);
+  }
+
+  .particionar {
+    border-radius: 5rem;
+    margin: 2rem;
+  }
+
+  .tablaPa {
+    max-height: 200px;
+    overflow-y: auto;
+    width: 90%;
+  }
+
+  .flex-row{
+    display: flex;
+    flex: 10;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-row .tablaPa:nth-child(2) {
+    background-color: whitesmoke;
+  }

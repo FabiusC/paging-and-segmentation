@@ -1,0 +1,71 @@
+.foot {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  /* Estilos para que el footer se quede fijo en la parte inferior */
+  bottom: 0;
+  width: 100%
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none;
+  /* Para eliminar los estilos nativos del sistema operativo */
+}
+
+/* Estilos al pasar el cursor sobre el select */
+select:hover {
+  border-color: #eb4848;
+}
+
+/* Estilos al enfocar el select */
+select:focus {
+  outline: none;
+  /* Elimina el contorno de enfoque predeterminado */
+  border-color: #de8c8c;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el borde cuando está deshabilitado */
+select:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+button {
+  border: none;
+  height: 2rem;
+  text-align: center;
+  border-radius: 5rem;
+  font-size: medium;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+button:hover {
+  cursor: pointer;
+  background-color: #333;
+  transition: 400ms;
+  color: white;
+}
+
+p {
+  padding: 1rem;
+}
+
+
+.flex-boton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  align-items: center;
+}

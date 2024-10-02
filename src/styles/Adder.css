@@ -1,0 +1,29 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.container {
+    margin: 3rem;
+}
+
+p {
+    font-size: small;
+    color: gray;
+}
+
+.botones {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+.color-white {
+    color: white;
+}

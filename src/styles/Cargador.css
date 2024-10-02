@@ -1,0 +1,21 @@
+.elemento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    padding: 1rem;
+    border-bottom: 1px solid #585858 ;
+    font-size: 1rem;
+}
+
+.procesos {
+    height: 18rem;
+    overflow: auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
