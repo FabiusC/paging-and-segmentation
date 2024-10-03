@@ -1,17 +1,59 @@
+.container {
+    margin: 3rem auto; /* Centrado y ajuste del margen */
+    padding: 2rem;
+    background-color: var(--primary-bg); /* Fondo usando la paleta */
+    color: var(--text-color); /* Color del texto usando la paleta */
+    border-radius: 1rem;
+    max-width: 600px; /* Limitar ancho máximo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras suaves */
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+p {
+    font-size: small;
+    color: var(--text-color); /* Ajuste del color */
+    text-align: center;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    margin-top: 1rem;
 }
 
-.container {
-    margin: 3rem;
+input {
+    width: 100%;
+    max-width: 400px; /* Limita el tamaño del input en pantallas grandes */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
 }
 
-p {
-    font-size: small;
-    color: gray;
+input::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover);
 }
 
 .botones {
@@ -19,11 +61,47 @@ p {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    background-color: #333;
+    background-color: var(--tertiary-bg); /* Usamos la paleta de colores */
     margin-top: 1rem;
     border-radius: 2rem;
+    padding: 1rem;
 }
 
 .color-white {
-    color: white;
+    color: var(--text-color); /* Color blanco usando la paleta */
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    input {
+        max-width: 100%; /* Asegura que los inputs se ajusten al tamaño de pantalla */
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    button {
+        width: 100%; /* El botón ocupará el ancho completo */
+        padding: 12px 0;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
 }

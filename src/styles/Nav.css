@@ -2,14 +2,20 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    background-color: brown;
-    color: #fff;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    flex-wrap: wrap;
 }
+
 ul {
     display: flex;
     flex-direction: row;
-    list-style:none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; 
 }
 
 li {
@@ -18,5 +24,34 @@ li {
 
 .link {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color); 
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--hover-accent); /* Color de hover de la paleta */
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Navegación vertical en pantallas pequeñas */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    ul {
+        flex-direction: column; /* Cambia la dirección de los enlaces a vertical */
+        width: 100%;
+    }
+
+    li {
+        width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+        text-align: left; /* Alinea los enlaces a la izquierda */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    li {
+        padding: 0.5rem; /* Reduce el padding para pantallas muy pequeñas */
+    }
 }

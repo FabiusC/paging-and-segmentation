@@ -1,3 +1,16 @@
+:root {
+  --primary-bg: #222222;
+  --secondary-bg: #303030;
+  --tertiary-bg: #3f3f3f;
+  --accent-color: #88ffc3;
+  --hover-accent: #56db78;
+  --border-color: #ffffff;
+  --text-color: #ffffff;
+  --button-bg: #00c3ff3b;
+  --button-hover: #00c3ff86;
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,10 +19,109 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  overflow-x: hidden; /* Ocultar scroll horizontal */
+  background-color: var(--primary-bg);
+  color: var(--text-color);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 100%; /* Elimina cualquier overflow */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden; /* Asegura que no haya desbordamiento horizontal */
+}
+
+header, .nav {
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Asegura que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.nav a {
+  color: var(--text-color);
+  margin: 0;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--hover-accent);
+}
+
+.main-content {
+  background-color: var(--primary-bg);
+  padding: 20px;
+  margin-top: 20px;
+  overflow-x: hidden; /* Impide desbordamiento horizontal en el contenido principal */
+}
+
+input, select {
+  width: 100%;
+  max-width: 500px; /* Limitar ancho para pantallas grandes */
+  padding: 10px;
+  margin: 10px 0;
+  background-color: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  max-width: 200px;
+  transition: all 0.5s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  header, .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  input, select {
+    width: 100%; /* Ajusta el input para pantallas pequeñas */
+  }
+
+  button {
+    width: 100%; /* Botón ocupa todo el ancho */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-content {
+    padding: 5px;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  input, select {
+    width: 100%; /* Asegura que los inputs se ajusten al tamaño de pantalla */
+  }
+
+  button {
+    width: 100%; /* Botón ocupa todo el ancho */
+    padding: 12px 0;
+  }
 }

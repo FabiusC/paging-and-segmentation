@@ -1,31 +1,65 @@
-/* Estilos para la tabla */
+/* Estilos generales para la tabla */
 table {
   width: 100%;
   border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
 }
 
 /* Estilos para las celdas de la tabla */
 td,
 th {
-  padding: 8px;
-  border: 1px solid #a9a9a9;
-  text-align: left;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+  white-space: nowrap; /* Evita que el texto se corte en filas pequeñas */
+  font-size: 0.9rem;
 }
 
 /* Estilos alternativos para filas impares */
 tr:nth-child(odd) {
-  background-color: #c43636;
-  color: white;
+  background-color: var(--tertiary-bg);
+  color: var(--text-color);
 }
 
 /* Estilos para el encabezado de la tabla */
 th {
-  color: rgb(255, 255, 255);
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
   text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .tabla {
-  height: 150px;
-  overflow: auto;
+  max-height: 300px;
+  overflow-y: auto; /* Scroll vertical si hay muchas filas */
+  overflow-x: auto; /* Scroll horizontal si hay muchas columnas */
   margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegura que la tabla sea responsiva en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  table {
+    font-size: 0.8rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+  }
+
+  td,
+  th {
+    padding: 8px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  table {
+    font-size: 0.7rem; /* Reduce más el tamaño del texto para pantallas pequeñas */
+  }
+
+  td,
+  th {
+    padding: 6px;
+  }
 }

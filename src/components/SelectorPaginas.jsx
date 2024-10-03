@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../styles/index.css';
+import '../styles/SelectorPaginas.css';
 import TipoContigua from './contigua/TipoContigua';
 import Swal from 'sweetalert2';
 import { paginacion, eliminar_proceso_paginacion, setter } from '../utils/paginacion'

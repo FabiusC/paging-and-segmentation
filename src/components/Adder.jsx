@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/index.css';
 import '../styles/Adder.css';
 import { imprimir, llamarLocalStorage } from '../utils/data'
 import Swal from 'sweetalert2'

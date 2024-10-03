@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../styles/index.css';
+
 import TipoGestion from './TipoGestion';
 import { dinamica, getProcesos } from '../utils/logica_dinamica'
 

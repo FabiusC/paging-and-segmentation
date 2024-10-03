@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../styles/index.css';
 import '../styles/Cargador.css';
 import { useProceso } from "./TipoGestion";
 import { llamarLocalStorage } from "../utils/data";

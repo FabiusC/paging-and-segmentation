@@ -1,11 +1,40 @@
 .fija {
-    margin: 2rem;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    height: 100vh; /* Toda la altura de la pantalla */
+    overflow: hidden; /* Evita que la página tenga scroll */
 }
 
-.bar {
+.left-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Mitad izquierda de la pantalla */
+    overflow-y: auto; /* Permite scroll solo en la parte izquierda */
+    padding: 1rem;
+}
+
+.info {
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.tabla {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto; /* Scroll en la tabla si es necesario */
+    margin-top: 1rem;
+}
+
+.right-section {
+    width: 50%; /* Mitad derecha de la pantalla */
+    height: 100vh; /* El chart ocupará toda la altura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.chart-container {
     max-height: 30rem;
     overflow-y: auto;
     width: 70%;
@@ -13,16 +42,39 @@
     display: flex;
     align-items: start;
     justify-content: center;
-}
 
-.info {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
+    height: 90%;
+    overflow-y: auto !important;
+    
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .cambio {
-    background-color: brown;
-    color: whitesmoke;
+    background-color: var(--button-bg); /* Usando la paleta de colores */
+    color: var(--text-color);
     font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cambio:hover {
+    background-color: var(--button-hover);
+}
+
+/* Responsividad */
+@media only screen and (max-width: 768px) {
+    .fija {
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        height: 50vh;
+    }
 }

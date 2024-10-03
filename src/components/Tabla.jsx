@@ -1,3 +1,4 @@
+import '../styles/index.css';
 import '../styles/Tabla.css';
 import { useTabla } from "./TipoGestion";
 

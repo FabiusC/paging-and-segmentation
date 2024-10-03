@@ -1,4 +1,5 @@
-import '../styles/App.css';
+import '../styles/index.css';  // Importa los estilos generales
+import '../styles/App.css';    // Importa los estilos específicos de App
 
 import Nav from './Nav';
 

@@ -1,0 +1,90 @@
+.cont {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 600px; /* Limita el ancho para pantallas grandes */
+    background-color: var(--primary-bg); /* Fondo usando la paleta de colores */
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
+    text-align: center;
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+span {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.entrada {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Estilos responsivos */
+@media only screen and (max-width: 768px) {
+    .cont {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    .entrada, select {
+        max-width: 100%; /* Asegura que los inputs y select se ajusten en pantallas pequeñas */
+    }
+
+    button {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cont {
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 12px;
+    }
+}

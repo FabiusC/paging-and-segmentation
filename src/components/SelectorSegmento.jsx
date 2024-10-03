@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../styles/SelectorSegmento.css';
 import TipoContigua from './contigua/TipoContigua';
 import Swal from 'sweetalert2';
 import { segmentacion, eliminarProceso, setter } from '../utils/logica_segmentacion'
