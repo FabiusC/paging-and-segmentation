@@ -1,7 +1,6 @@
 .fija {
     display: flex;
     flex-direction: row;
-    height: 100vh; /* Toda la altura de la pantalla */
     overflow: hidden; /* Evita que la página tenga scroll */
 }
 
@@ -26,26 +25,22 @@
 }
 
 .right-section {
-    width: 50%; /* Mitad derecha de la pantalla */
-    height: 100vh; /* El chart ocupará toda la altura */
     display: flex;
     justify-content: center;
+    overflow-y: auto; /* Scroll en la tabla si es necesario */
     align-items: center;
     padding: 1rem;
 }
 
 .chart-container {
     max-height: 30rem;
-    overflow-y: auto;
     width: 70%;
+    overflow-y: auto; /* Scroll en el gráfico si es necesario */
     margin-left: 2rem;
     display: flex;
     align-items: start;
     justify-content: center;
 
-    height: 90%;
-    overflow-y: auto !important;
-    
     border: 1px solid #ccc;
     padding: 1rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -60,7 +55,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 1rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .cambio:hover {

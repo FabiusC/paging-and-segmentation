@@ -121,7 +121,7 @@ const TipoGestion = ({ algoritmo, ajuste, procesos_cargados }) => {
             </div>
             <div className="right-section">
                 <div className="chart-container">
-                    <Bar options={options} data={chart} width={800} height={1000} />
+                    <Bar options={options} data={chart} />
                 </div>
             </div>
         </div>
