@@ -64,7 +64,7 @@ const TipoContigua = ({ carga, descarga, ajuste, nombre, inicio, nombreT, nombre
         for (let index = 0; index < Object.keys(Tablacon).length; index++) {
             const element = Tablacon[Object.keys(Tablacon)[index]];
             if (element[0] !== undefined && element[0] !== 'fraginterna') {
-                objeto.push({ label: element[0], data: [element[2] - element[1]], backgroundColor: "rgb(255, 0, 0)", borderWidth: 2, borderColor: `rgb(255,0,0,0.3)` })
+                objeto.push({ label: element[0], data: [element[2] - element[1]], backgroundColor: "rgb(23, 125, 157)", borderWidth: 2, borderColor: `rgb(3, 43, 57)` })
             } else if (element[0] === 'fraginterna') {
                 objeto.push({ label: element[0], data: [element[2] - element[1]], backgroundColor: "rgba(255, 0, 0, 0.1)", borderWidth: 1 })
             }
